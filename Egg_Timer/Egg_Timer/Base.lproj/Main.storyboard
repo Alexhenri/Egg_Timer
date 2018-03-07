@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Egg_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ci-w9-Hbh">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="-10" id="gYc-Yw-s8h">
+                                        <connections>
+                                            <action selector="minusButtonTapped:" destination="BYZ-38-t0r" id="yFe-2X-5jL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="NW1-OE-hQ1"/>
+                                    <barButtonItem title="Reset" id="rgq-de-2e7">
+                                        <connections>
+                                            <action selector="resetButtonTapped:" destination="BYZ-38-t0r" id="bAQ-9u-zu9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="yaj-jh-DHb"/>
+                                    <barButtonItem title="+10" id="4uw-m7-0RV">
+                                        <connections>
+                                            <action selector="plusButtonTapped:" destination="BYZ-38-t0r" id="BVP-m0-T5u"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="210" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xj8-GG-zwp">
+                                <rect key="frame" x="118.5" y="283" width="138" height="101.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="85"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rtO-Y4-lvs">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Egg Timer" id="F9f-PH-MzU">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="pause" id="KXq-KV-0IP">
+                                            <connections>
+                                                <action selector="pauseButtonTapped:" destination="BYZ-38-t0r" id="nUK-e3-uDR"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="play" id="YlD-Vx-itx">
+                                            <connections>
+                                                <action selector="playButtonTapped:" destination="BYZ-38-t0r" id="saP-TG-Wzq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xj8-GG-zwp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bQG-s8-u6x"/>
+                            <constraint firstItem="Xj8-GG-zwp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mKO-pQ-tJl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="Xj8-GG-zwp" id="DEX-wr-h8G"/>
+                        <outlet property="minusButton" destination="gYc-Yw-s8h" id="xd8-nN-uqe"/>
+                        <outlet property="pauseButton" destination="KXq-KV-0IP" id="XTp-rP-Yyd"/>
+                        <outlet property="playButton" destination="YlD-Vx-itx" id="k2W-MN-y4K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
